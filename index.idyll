@@ -55,6 +55,8 @@ The more hours he puts in, the more closer the goal looks. However, on one day h
 Devastated he had no one to turn to with bills piling. Thinking all of this is too much to handle, he wondered what the point of living is if he was going to end up homeless in a week or two. Everything felt pointless. 
 [/div]
 
+### Let's explore where Jacob lives!
+So first let's see how suicide rates differ amongst all the countries. The graph below allows you to choose a country and explore the average suicide rate in the years `1990-2017`.
 
 Choose your country:
 [var name:"selectVal" value:"World" /] [Select value:selectVal options:`["Afghanistan","Albania","Algeria","Angola","Antigua and Barbuda","Argentina","Armenia","Australia","Austria","Azerbaijan","Bahamas","Bahrain","Bangladesh","Barbados","Belarus","Belgium","Belize","Benin","Bhutan","Bolivia","Botswana","Brazil","Brunei","Bulgaria","Burkina Faso","Burundi","Cambodia", "Cameroon","Canada","Central African Republic","Central Asia", "Chad", "Chile","China","Colombia","Comoros","Congo","Costa Rica","Cote d'Ivoire","Croatia","Cuba","Cyprus","Czech Republic","Democratic Republic of Congo", "Denmark", "Djibouti", "Dominica", "Dominican Republic", "East Asia", "Eastern Europe", "Ecuador", "Egypt", "El Salvador", "Equatorial Guinea", "Eritrea","Estonia", "Ethiopia","Fiji","Finland","France","Gabon", "Gambia", "Georgia", "Germany","Ghana","Greece", "Guatemala","Guinea", "Guinea-Bissau","Guyana","Haiti","Honduras", "Hungary","Iceland","India", "Indonesia","Iran","Iraq","Ireland","Israel","Italy","Jamaica", "Japan", "Jordan", "Kazakhstan", "Kenya", "Kuwait", "Kyrgyzstan","Laos","Latvia","Lebanon", "Lesotho", "Liberia", "Libya", "Lithuania","Luxembourg","Macedonia", "Madagascar","Malawi", "Malaysia", "Maldives", "Mali",  "Malta","Mauritania","Mexico","Moldova","Montenegro","Morocco","Mozambique","Myanmar","Namibia","Nepal", "Netherlands","New Zealand","Nicaragua","Niger","Nigeria","North America","North Korea","Norway","Pakistan", "Palestine", "Panama","Papua New Guinea","Paraguay","Peru","Philippines","Poland","Portugal","Qatar","Romania","Russia","Rwanda","Saint Lucia","Saudi Arabia","Senegal","Serbia","Sierra Leone", "Singapore", "Slovakia", "Slovenia", "Solomon Islands", "Somalia","South Africa", "South Asia","South Korea", "South Sudan","Southeast Asia","Spain", "Sri Lanka","Sub-Saharan Africa", "Sudan",  "Suriname", "Swaziland","Sweden","Switzerland", "Syria", "Taiwan", "Tajikistan","Tanzania", "Thailand","Togo", "Trinidad and Tobago", "Tunisia","Turkey","Turkmenistan", "Uganda","Ukraine", "United Arab Emirates","United Kingdom","United States" ,"Uruguay" , "Uzbekistan" ,"Vanuatu", "Venezuela" ,"Vietnam","Western Europe","World","Yemen" ,"Zambia","Zimbabwe"]`  /]
@@ -73,10 +75,15 @@ Choose your country:
 
 [br/]
 
-# *Body*
-###Top Ten Countries
-Annually, top 10 countries that show hight rate of suicide has been changed. 
+[p] ####Brief summary: [/p]
+
+We can see the that in the United States deaths caused by committing suicide have increased at a faster rate than any other country.
+It is hard to point out a single reason why, instead it is an indication of the overall conditions in the country. Hence, we can see why Jacob and many others like him are having a difficult time.
+[br/]
+[br/]
+We also provide information below on the Top 10 countries by global annual average of suicide rates.
 [var name:"yea" value:1990/]
+[br/]
 [br/]
 Select the year:
 [br/]
@@ -124,11 +131,13 @@ Here are top 10 countries that show high average suicide rate during 1990~2017.
 From the result, we find `Greenland` shows the highest suicide rate, and `Guam`, `Guyana`, `Kazakhstan`, `Lithuania`,`Northern Mariana Islands`,`Qatar`,`South Korea`,`Sri Lanka` and `Suriname` belong to the top 10 countries
 [/Conditional]
 [br/]
-
 [br/]
-###Would Age Matter?
-Suicide is all about humans behavior. For this reason, demographic approach is the basic but necessary process to get a good point of view. First of all, we explore our data with subject's age.
-You can select a country you would like to investigate in. If you want, compare it with the summary of the data(Boxplot). 
+####So we know that the rates of suicide are different in all countries. But how does it fare on the individual level?
+###Let’s look at the ages
+Determing why someone chooses to commit suicide is complex. However, looking at demographics such as age can be useful. Individuals in the same age group typically go through similar types of experiences and similar amount of growth and maturity. We can also differentiate between age groups as typically people in different age groups have different problems and people in the same group can have similar kinds of challenges.
+
+Select a country you would like to investigate and compare it with the summary of the data in the Boxplot.
+
 [br/]
 [data name:"agesuicide" source:"average age suicide rate.csv"/]
 Choose your country:
@@ -143,8 +152,8 @@ Choose your country:
 [IdyllVegaLite
   data:age
   spec:`{
-    width:300,
-    height:300,
+    width:500,
+    height:500,
     mark: "bar",
     encoding: {
       x: {field:"agegroup", type:"nominal", axis: {title: "Age Group"}},
@@ -158,8 +167,8 @@ Choose your country:
 [IdyllVegaLite
   data:age
   spec:`{
-    width:300,
-    height:300,
+    width:500,
+    height:500,
     mark: "arc",
     encoding: {
       theta: {field:"prop", type:"quantitative"},
@@ -175,8 +184,8 @@ Choose your country:
 [IdyllVegaLite
   data:agesuicide
   spec:`{
-    width:300,
-    height:300,
+    width:500,
+    height:500,
     mark: "boxplot",
     encoding: {
       x: {field:"agegroup", type:"nominal", axis: {title: "Age Group"}},
@@ -186,15 +195,18 @@ Choose your country:
 [/Conditional]
 
 [br/]
-From the graphs, we noticed the people who is older than 70 tend to commit suicide more through out whole nations. On the other hand, the age group 5~14 is the group that shows the least suicide rate.
-However, the result can be differed by a country and a region.
+Ahah. We can see there is a lot of variation in the suicide rates across age groups of countries. This might hint us about how well the country has treated citizens of that age group. Countries that have policies on free education and food stamps have had lower rates of suicides amongst age group 1-15. Countries with lower taxes and more employment have had lower rates in ages 15-50. And countries with good retirement plans have had lower rates amongst citizen that are more than 70 years old.
+
+Jacob is out of a job. This is a pretty stressful situation for him and it is important that the country he lives in (United States) provides employment opportunities for a hard working citizen like him.
 [br/]
 
-###Would Gender Matter?
-The next feature of demogrpahic approach is gender.
-[br/]
+#### We can move now onto the next major detail in the data.
 
-Can you guess which gender commit suicide more:
+### Difference between genders
+
+##### Surprise!
+
+There is a significant difference in suicide rates between males and females. The difference is extremely high in some countries and less extreme others. I will let you explore and find out which gender is more prone to suicide. 
 [br/]
 Male or Female?
 [var name:"textVal" value:"" /]
@@ -209,8 +221,8 @@ Male or Female?
 [IdyllVegaLite
   data:gender
   spec:`{
-    width:300,
-    height:300,
+    width:500,
+    height:500,
     mark: "boxplot",
     encoding: {
       x: {field:"gender", type:"nominal", axis: {title: "Gender"}},
@@ -226,8 +238,8 @@ Choose your country:
 [IdyllVegaLite
   data:gend
   spec:`{
-    width:300,
-    height:300,
+    width:500,
+    height:500,
     mark: "bar",
     encoding: {
       x: {field:"gender", type:"nominal", axis: {title: "Gender"}},
@@ -235,7 +247,9 @@ Choose your country:
     }
   }`/]
 [br/]
-From the boxplot and the bargraph, we can easily figured out males commit suicide more than females do.
+Again, there could be numerous reasons and hence not fair to come to conclusions. However, we can highlight some historically consisten facts. Suicide committed by men are often more violent than women and hence it is more difficult for some other person to intervene and try to stop them.
+Further, it is always said in popular culture and in religous sayings that men are supposed to be strong, or protectors, as seen in phrases such as "man of the house", or caretaker. Under pressure of the aforementioned expectations, men don't share their weakness and find it much easier to end their pain by committing suicide.
+Jacob too might have at some point felt this way. Hence, it is vital what we communicate with each other, what we show on media platforms and pop culture and what we teach the kids. 
 [/Conditional]
 [Conditional if: `textVal=="Female"||textVal=="female"`]
 [br/]
@@ -246,8 +260,8 @@ From the boxplot and the bargraph, we can easily figured out males commit suicid
 [IdyllVegaLite
   data:gender
   spec:`{
-    width:300,
-    height:300,
+    width:500,
+    height:500,
     mark: "boxplot",
     encoding: {
       x: {field:"gender", type:"nominal", axis: {title: "Gender"}},
@@ -263,8 +277,8 @@ Choose your country:
 [IdyllVegaLite
   data:gend
   spec:`{
-    width:300,
-    height:300,
+    width:500,
+    height:500,
     mark: "bar",
     encoding: {
       x: {field:"gender", type:"nominal", axis: {title: "Gender"}},
@@ -272,8 +286,33 @@ Choose your country:
     }
   }`/]
 [br/]
-From the boxplot and the bargraph, we can easily figured out males commit suicide more than females do.
+Again, there could be numerous reasons and hence not fair to come to conclusions. However, we can highlight some historically consisten facts. Suicide committed by men are often more violent than women and hence it is more difficult for some other person to intervene and try to stop them.
+Further, it is always said in popular culture and in religous sayings that men are supposed to be strong, or protectors, as seen in phrases such as "man of the house", or caretaker. Under pressure of the aforementioned expectations, men don't share their weakness and find it much easier to end their pain by committing suicide.
+Jacob too might have at some point felt this way. Hence, it is vital what we communicate with each other, what we show on media platforms and pop culture and what we teach the kids. 
 [/Conditional]
+[br/]
+[br/]
+### Phew! 
+
+#### What have we learned?
+
+As you would have concluded too, studying suicides is pretty complicated. And partly, that is the reason why so many people fall victim to it! So how do we stop it?
+The answer lives in our daily lives. The best thing you can do is lend your ears and listen to other people. 
+
+### Yes, `Listen!`
+
+A lot of suicide deaths are caused due to the feeling of isolation! If you can check in with your friends, family and loved ones, it goes a long way! Next, we need to change the way we talk about suicides. 
+We need to make it more normal and comfortable for people like Jacob to express their emotions and difficulties. We need to start accepting that our preconceived biases may be flawed. More than anything, we need to be together! 
+
+### Hope you like and share this explorable!
+
+[Graphic]
+[img src:`"static/images/aware.jpg"`/]
+[/Graphic]
+
+[div style: `{color: 'pink', marginTop: '10rem'}`]
+by HanGyu Kang, Desmond Fung, Param Gandhi. 
+[/div]
 
 
 
